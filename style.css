@@ -3,30 +3,34 @@
   --gray-bg: #f4f6f7;
   --white-text: #ffffff;
   --gray-text: #5f727f;
+  --color-border: #000;
+  --color-header: #393d50;
+  --color-event: #ffcd37;
 }
 
 .container {
   margin: 50px auto;
   text-align: center;
   display: flex;
+  margin-left: 50px;
 }
 
 .card {
   margin: 0 auto;
   height: auto;
   width: 362px;
-  border: 1px solid rgb(30, 27, 27);
+  border: 1px solid var(--color-border);
 }
 
-.cardHeader_title {
+.card_Header--title {
   font-size: 36px;
 }
 
-.itemTitle {
+.item_Title {
   font-size: 24px;
 }
 
-.cardHeader_title,
+.card_Header--title,
 .itemTitle {
   color: var(--blue-text);
 }
@@ -38,19 +42,15 @@ li {
   font-weight: 400;
 }
 
-li:nth-child(2),
-li:nth-child(4),
-li:nth-child(6) {
+li:nth-child(2n-1) {
   background-color: var(--gray-bg);
 }
 
-li.item.itemutimate {
+li.item.item_utimate {
   text-decoration: none;
 }
 
-li:nth-child(4),
-li:nth-child(5),
-li:nth-child(6) {
+li:nth-child(n + 3) {
   text-decoration: line-through;
 }
 
@@ -58,17 +58,30 @@ li:nth-child(6) {
   text-decoration: none;
 }
 
-.cardHeader {
+.card_Header {
+  position: relative;
   width: 100%;
   padding: 30px 0;
   display: inline-block;
-  background: #393d50;
+  background: var(--color-header);
   line-height: 1.2;
 }
-
+.card_Header--new {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: var(--color-event);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 50%;
+  transform: translate(-20px, -23px);
+}
 h4,
 h5,
-.itemContent,
+.item_Content,
 li {
   color: var(--gray-text);
 }
@@ -77,22 +90,22 @@ h4 > span {
   color: var(--white-text);
 }
 
-.cardBody_header {
+.card_Body--header {
   padding: 30px;
   line-height: 1.26;
-  
 }
 
-.cardHeader_content {
+.card_Header--content {
   font-size: 24px;
 }
 
-.itemContent {
+.item_Content {
   font-size: 14px;
 }
 
-.cardBody_footer {
+.card_Body--footer {
   margin: 35px 0 25px 0;
+  padding: 10px;
 }
 
 button {
@@ -117,9 +130,10 @@ button:hover {
   .container {
     display: block;
     margin-top: 10px;
+    margin-left: 4px;
   }
   .card {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
   }
 }
 
@@ -127,21 +141,22 @@ button:hover {
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
   .container {
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 4px;
   }
   .card {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     height: auto;
-    width: 700px;
-    border: 1px solid rgb(30, 27, 27);
+    width: 500px;
   }
 }
+
 /* pc */
-@media only screen and (min-width:1024px){
-  .card{
-    margin-left: 15px;
+@media only screen and (min-width: 1024px) {
+  .card {
+    margin-left: 35px;
   }
-  .cardHeader{
+  .card_Header {
     height: 100px;
   }
 }
