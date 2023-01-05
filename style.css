@@ -4,50 +4,60 @@
   --white-text: #ffffff;
   --gray-text: #5f727f;
 }
+
 .container {
   margin: 50px auto;
   text-align: center;
   display: flex;
 }
+
 .card {
   margin: 0 auto;
   height: auto;
   width: 362px;
   border: 1px solid rgb(30, 27, 27);
 }
+
 .cardHeader_title {
   font-size: 36px;
 }
+
 .itemTitle {
   font-size: 24px;
 }
+
 .cardHeader_title,
 .itemTitle {
   color: var(--blue-text);
 }
+
 li {
   list-style: none;
   padding: 20px 0;
   font-size: 16px;
   font-weight: 400;
 }
+
 li:nth-child(2),
 li:nth-child(4),
 li:nth-child(6) {
   background-color: var(--gray-bg);
 }
+
 li.item.itemutimate {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 li:nth-child(4),
 li:nth-child(5),
 li:nth-child(6) {
   text-decoration: line-through;
 }
 
-.card:nth-last-child(0){
-    text-decoration: none;
+.card:nth-last-child(0) {
+  text-decoration: none;
 }
+
 .cardHeader {
   width: 100%;
   padding: 30px 0;
@@ -55,39 +65,83 @@ li:nth-child(6) {
   background: #393d50;
   line-height: 1.2;
 }
-h4,h5,
+
+h4,
+h5,
 .itemContent,
 li {
   color: var(--gray-text);
 }
+
 h4 > span {
   color: var(--white-text);
 }
+
 .cardBody_header {
   padding: 30px;
   line-height: 1.26;
+  
 }
+
 .cardHeader_content {
   font-size: 24px;
 }
-.itemContent{
-    font-size: 14px;
+
+.itemContent {
+  font-size: 14px;
 }
+
 .cardBody_footer {
-  margin:35px 0 25px 0;
+  margin: 35px 0 25px 0;
 }
+
 button {
   padding: 10px 25px;
   border: 2px solid var(--blue-text);
   font-weight: 600;
-  background-color:var(--white-text) ;
+  background-color: var(--white-text);
   border-radius: 4px;
-  color:var(--blue-text) ;
-}
-button:hover{
-    color:var(--white-text) ;
-    background-color:var(--blue-text);
-    cursor: pointer;
-    transition: linear 0.2s;
+  color: var(--blue-text);
 }
 
+button:hover {
+  color: var(--white-text);
+  background-color: var(--blue-text);
+  cursor: pointer;
+  transition: linear 0.2s;
+}
+
+/* Responsive */
+/* mobile */
+@media only screen and (max-width: 739px) {
+  .container {
+    display: block;
+    margin-top: 10px;
+  }
+  .card {
+    margin-bottom: 10px;
+  }
+}
+
+/* tablet */
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .container {
+    display: block;
+    margin-top: 10px;
+  }
+  .card {
+    margin-bottom: 10px;
+    height: auto;
+    width: 700px;
+    border: 1px solid rgb(30, 27, 27);
+  }
+}
+/* pc */
+@media only screen and (min-width:1024px){
+  .card{
+    margin-left: 15px;
+  }
+  .cardHeader{
+    height: 100px;
+  }
+}
