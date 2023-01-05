@@ -131,7 +131,7 @@ button:hover {
   transition: linear 0.2s;
 }
 .card:hover {
-  transform: translateY(-50px);
+  transform: translateY(-25px);
   cursor: pointer;
   transition: linear 0.2s;
   box-shadow: 10px 5px 5px var(--gray-bg);
